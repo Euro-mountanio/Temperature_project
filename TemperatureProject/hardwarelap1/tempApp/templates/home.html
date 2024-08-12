@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Data</title>
+</head>
+<body>
+    {% if api_data %}
+        <h2>Temperature  Data</h2>
+        <ul>
+            <li>{{ api_data.temperature  }}</li>
+
+        </ul>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>
