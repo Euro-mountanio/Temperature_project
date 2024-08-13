@@ -16,7 +16,7 @@ class TemperatureReadingSchema(Schema):
 def create_temperature_reading(request, temperature_data: TemperatureReadingSchema):
     reading = TemperatureReading(temperature=temperature_data.temperature)
     reading.save()
-    return JsonResponse({"status": {temperature_data.temperature}})
+    return 0
 
 @api.get("/show")
 def show_temp(request , temp_data: TemperatureReadingSchema):
