@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/', api.urls),
     path('', views.show_temp, name='home'),
     path('admin/', admin.site.urls),
+    path('charts/',views.chart, name='charts'),
 ]

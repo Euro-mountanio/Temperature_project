@@ -29,7 +29,7 @@ def show_temp(request , temp_data: TemperatureReadingSchema):
 
 
 @api.get("/hello")
-def hello(request, name = " world "):
+def hello(request, name=" world "):
     return f"hello  {name}"
 
 
