@@ -32,6 +32,16 @@ def show_temp(request , temp_data: TemperatureReadingSchema):
 def hello(request, name=" world "):
     return f"hello  {name}"
 
+@api.get("/show_temperature")
+def show_temp(request):
+    temperature_reading = TemperatureReading.objects.order_by('-id').first()
+    humidity_reading = HumidityReading.objects.order_by('-id').first()
+    data = {
+        "temperature": temperature_reading.temperature,
+        "humidity": humidity_reading.humidity
+    }
+    return data
+
 
 
 
